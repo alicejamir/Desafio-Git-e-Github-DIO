@@ -1,0 +1,87 @@
+
+O Git é basicamente um softwer de versionamento de código, em outras palavras um sistema de controle de versões.
+
+
+Git Bash: é um terminal extendido paraa otimizar o uso do Git.
+
+Comandos e Atalhos Básicos (Git Bash):
+ 
+ Comandos:
+  -cd (Se usa para navegar dentro das pastas)   
+    cd nome da pasta (vai te levar direto para a pasta que você digitou)
+    cd .. (Faz voce retroceder para o diretório anterior)
+
+  -ls (Lista as pastas que estão comtidas no diretório)
+  
+  -clear (Limpa as informções da tela do terminal)
+  
+  -mkdir(Cria novas pastas dentro de um diretório)
+      ex: mkdir novapasta (Vai criar uma nova pasta no diretório nomeada novapasta)
+
+  -echo (Cria um arquivo no diretório)
+      ex: echo Texto > nomedoarquivo.txt (Aqui vai ser criado um arquivo com o nome: nomedoarquivo, no formato .txt e o conteúdo: Texto.)
+  
+ Atalhos:
+
+  - Tecla Tab (Para autocompletar o que você escreve)
+  - Tecla Setinha para cima/para baixo ( Para você navegar pelos comandos que já foram dados no terminal
+  - Ctrl+L (Limpa as informções da tela do terminal)
+
+
+Comandos específicos do Git:
+
+  -git init (Para iniciar o repositório do Git)
+  -git add  (Para poder mover arquivos e iniciar o versionamento)
+  -git add*  (Para poder mover arquivos e iniciar o versionamento)
+  -git add.  (Para poder mover arquivos e iniciar o versionamento)
+  -git commit (Para criar o commit)
+      ex: -git commit -m "informação sobre atualização" (Essa informação vai ficar salva e também ajuda a administrar e entender as etapas e cada versão gerada.)
+  -git status (Mostra o status dos arquiuvos, sendo assim um comando que nos ajuda no monitoramento desses status.)
+  -git config --list (Mostra uma lista das configurações do Git)
+  -git config --global user.name seunnome (Para adicionar o seu usuário. Obs:  é importante que o usuário seja o mesmo que foi cadastrado no Github)
+  -git config --global user.email exemplodeemailGgmmail.com (Para adicionar o seu email.  Obs:  é importante que o email o mesmo que foi cadastrado no Github)
+  -git config --global --unset user.email (Paraapagar o email que foi cadastrado)
+  -git config --global --unset user.name (Para apagar nome que foi cadastrado)
+  -git clone (é um comando para baixar o código-fonte existente de um repositório remoto, o Github por exemplo)
+  -git push (enviar as alterações para o servidor remoto.)
+
+
+
+  
+Chave SSH: é uma forma de estabelecer uma forma segura e enncriptada entre duas máquinas. (É como uma assinatura criada no terminal para estabelecer uma conexão entre a máquina e o servidor.) 
+   
+ Comandos para gerar as chaves  SSH:
+
+  - ssh-keygen  -t ed25519 -C emaildeexmplo@gail.com (Ele vai gerar a chave publica e privada.)
+  
+  Quando você der o enter o terminal vai te mostrar onde as suas chaves foram salvas no seu computador.  
+      ex: /c/Users/usuario/.ssh/id_ed25519  (Obs: as pastas que começa com ponto são ocultas e onde tem Usuário você deve escrever o seu usúario, no meu cso seria Alice)
+  Quando voce der o enter ele vai pedir o Passphrase (empppty for no passphrase): você deve colocar uma senha e dar enter.
+  Depois ele vai pedir uma confirmação de senha (passpphrase again): repita e senha e dê enter.
+  Agora a suas cavves foram geradas e já estão salvas na sua máquina.
+
+ Como mencionado anteriormente os arquivos com ponto na frente são ocultos então vamos navegar pela pasta para poder visualizar as chaves com comandos específicos.
+
+  -cd /c/Users/Usuário/ .ssh/ (para ir para a pasta .shh)
+ Quando estuver dentro da pasta .ssh digite:
+  -ls (Para poder listar o conteúdo da pasta)
+   ex: id_ed25519 (chave privada) id_ed25519.pub (chave pública)
+  
+ Para visualizar o conteúdo das chaves digite o comando cat
+    ex: cat id_ed25519.pub (vai  mostrar o conteúdo da cave publica, que é que usaremos para associar a nossa  mmáquina com o servidor (Github)
+
+ O próximo passo é copiar o código da chave que ele dá e colocar no Github.
+
+ Depois da chave adicionada no Github você precisa inicializar o ssh aget (Que é tipo uma "entidade" que vai ficar encarregada liddar comm as chaves)
+ Use o comando eval
+     -eval $(ssh-agent -s)
+      ex: Agent pid 1345 (Aqui ele da inicio a um projeto. Obs: esse numero é um exemplo.)
+
+ Depois de gerar o agente e dar inicio a um projeto, precisamos entrega a nossa chave privavda para ele.
+  -ssh-add id_ed25519 (Obs: id_ed25519 é onde  está a nossa chave privada, como ja vamos estar na pasta .sssh podemos colocar a chave diretamente)
+   Nesse momento ele pede a senha que voce colocou quando estava criando a chave. 
+   Depois de colocar a chave e confirmar ele te devolve alguumas informaçções e a sua chahve já foi adicionadaa.
+  
+
+
+
