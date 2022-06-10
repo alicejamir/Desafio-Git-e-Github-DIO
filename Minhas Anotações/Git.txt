@@ -2,13 +2,13 @@
 O Git é basicamente um softwer de versionamento de código, em outras palavras um sistema de controle de versões.
 
 
-Git Bash: é um terminal extendido paraa otimizar o uso do Git.
+Git Bash: é um terminal extendido para otimizar o uso do Git.
 
 Comandos e Atalhos Básicos (Git Bash):
  
  Comandos:
   -cd (Se usa para navegar dentro das pastas)   
-    cd nome da pasta (vai te levar direto para a pasta que você digitou)
+    cd nome da pasta (Vai te levar direto para a pasta que você digitou)
     cd .. (Faz voce retroceder para o diretório anterior)
 
   -ls (Lista as pastas que estão comtidas no diretório)
@@ -42,8 +42,8 @@ Comandos específicos do Git:
   -git config --global user.email exemplodeemailGgmmail.com (Para adicionar o seu email.  Obs:  é importante que o email o mesmo que foi cadastrado no Github)
   -git config --global --unset user.email (Paraapagar o email que foi cadastrado)
   -git config --global --unset user.name (Para apagar nome que foi cadastrado)
-  -git clone (é um comando para baixar o código-fonte existente de um repositório remoto, o Github por exemplo)
-  -git push (enviar as alterações para o servidor remoto.)
+  -git clone (É um comando para baixar o código-fonte existente de um repositório remoto, o Github por exemplo)
+  -git push (Enviar as alterações para o servidor remoto.)
 
 
 
@@ -62,13 +62,13 @@ Chave SSH: é uma forma de estabelecer uma forma segura e enncriptada entre duas
 
  Como mencionado anteriormente os arquivos com ponto na frente são ocultos então vamos navegar pela pasta para poder visualizar as chaves com comandos específicos.
 
-  -cd /c/Users/Usuário/ .ssh/ (para ir para a pasta .shh)
+  -cd /c/Users/Usuário/ .ssh/ (Para ir para a pasta .shh)
  Quando estuver dentro da pasta .ssh digite:
   -ls (Para poder listar o conteúdo da pasta)
-   ex: id_ed25519 (chave privada) id_ed25519.pub (chave pública)
+   ex: id_ed25519 (Chave privada) id_ed25519.pub (Chave pública)
   
  Para visualizar o conteúdo das chaves digite o comando cat
-    ex: cat id_ed25519.pub (vai  mostrar o conteúdo da cave publica, que é que usaremos para associar a nossa  mmáquina com o servidor (Github)
+    ex: cat id_ed25519.pub (Vai  mostrar o conteúdo da cave publica, que é que usaremos para associar a nossa  mmáquina com o servidor - Github)
 
  O próximo passo é copiar o código da chave que ele dá e colocar no Github.
 
