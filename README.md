@@ -5,7 +5,7 @@ Agora tem como função armazenar algumas informações que acho importante, com
 
 
 ## **Links Úteis**:
--Primeiro Módulo:
+- Primeiro Módulo:
 
 [Download Git:](https://git-scm.com/downloads)
 
