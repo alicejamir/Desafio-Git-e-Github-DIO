@@ -1,0 +1,11 @@
+ ADROID: é um sistema operacional
+
+Desenvolvimento Android
+
+  -Hibrido  x  Nativo
+   
+   Hibrido: sendo o unico codigo para gerar aplicaçoes numa perspctiva um pouco mais generica, para varias plataformas. 
+   Nativo: sendo o aprofundamento desse desenvolvimento atraves do desenvolvimento de um unico codigo para uma unica plataforma.
+
+
+Elvis Operator : ele poder sre encadeado várias vezes mas, sempre forneca um valor caso todos os valores anteriores seja nulo. ( no exemplo esse valor final, caso a e b sejam nulos, é o 0)
